@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "app.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 
+
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="login-button">
+                <button onclick="openLoginModal()"><i class="fas fa-user-lock"></i></button>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Rechercher...">
+                <button onclick="searchFunction()">Rechercher</button>
+            </div>
+
+        </nav>
+    </header>
+
     <div class = "map" id= "map">
         <div class = "map__image">
     
@@ -308,110 +329,208 @@
     </svg>
     </div>
     
-
+<nav>
     <div class ="map__list">
+       
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Hauts de France</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-02" class="is-active"id ="list-02"> Aisne</a></li>
+                <li><a href="https://google.com/?q=FR-59" class="is-active"id ="list-59"> Nord</a></li>
+                <li><a href="https://google.com/?q=FR-60" class="is-active"id ="list-60"> Oise</a></li>
+                <li><a href="https://google.com/?q=FR-62" class="is-active"id ="list-62"> Pas-de-Calais</a></li>
+                <li><a href="https://google.com/?q=FR-80" class="is-active"id ="list-80"> Somme</a></li>
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Île de France</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-77"  class="is-active"id ="list-77"> Seine-et-Marne</a></li>
+                <li><a href="https://google.com/?q=FR-91"  class="is-active"id ="list-91"> Essonne</a></li>
+                <li><a href="https://google.com/?q=FR-92"  class="is-active"id ="list-92"> Hauts-de-Seine</a></li>
+                <li><a href="https://google.com/?q=FR-93"  class="is-active"id ="list-93"> Seine-Saint-Denis</a></li>
+                <li><a href="https://google.com/?q=FR-94"  class="is-active"id ="list-94"> Val-de-Marne</a></li>
+                <li><a href="https://google.com/?q=FR-95"  class="is-active"id ="list-95"> Val-d Oise</a></li>
+                <li><a href="https://google.com/?q=FR-75"  class="is-active"id ="list-75"> Ville de Paris</a></li>
+                <li><a href="https://google.com/?q=FR-78"  class="is-active"id ="list-78"> Yvelines</a></li>
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Normandie</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-14"  class="is-active"id ="list-14"> Calvados</a></li>
+                <li><a href="https://google.com/?q=FR-50"  class="is-active"id ="list-50"> Manche</a></li>
+                <li><a href="https://google.com/?q=FR-61"  class="is-active"id ="list-61"> Orne</a></li>
+                <li><a href="https://google.com/?q=FR-27"  class="is-active"id ="list-27"> Eure</a></li>
+                <li><a href="https://google.com/?q=FR-76"  class="is-active"id ="list-76"> Seine-Maritime</a></li>
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Grand Est</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-08"  class="is-active"id ="list-08"> Ardennes</a></li>
+                <li><a href="https://google.com/?q=FR-51"  class="is-active"id ="list-51"> Marne</a></li>
+                <li><a href="https://google.com/?q=FR-10"  class="is-active"id ="list-10"> Aube</a></li>
+                <li><a href="https://google.com/?q=FR-55"  class="is-active"id ="list-55"> Meuse</a></li>
+                <li><a href="https://google.com/?q=FR-52"  class="is-active"id ="list-52"> Haute-Marne</a></li>
+                <li><a href="https://google.com/?q=FR-54"  class="is-active"id ="list-54"> Meurthe-et-Moselle</a></li>
+                <li><a href="https://google.com/?q=FR-57"  class="is-active"id ="list-57"> Moselle</a></li>
+                <li><a href="https://google.com/?q=FR-88"  class="is-active"id ="list-88"> Vosges</a></li>
+                <li><a href="https://google.com/?q=FR-67"  class="is-active"id ="list-67"> Bas-Rhin</a></li>
+                <li><a href="https://google.com/?q=FR-68"  class="is-active"id ="list-68"> Haut-Rhin</a></li>
 
-        <ul>
-    
-                <li><a href="https://google.com/?q=FR-01" id ="list-01"> Ain</a></li>
-                <li><a href="https://google.com/?q=FR-02" id ="list-02"> Aisne</a></li>
-                <li><a href="https://google.com/?q=FR-03" id ="list-03"> Allier</a></li>
-                <li><a href="https://google.com/?q=FR-04" id ="list-04"> Alpes-de-Haute-Provence</a></li>
-                <li><a href="https://google.com/?q=FR-05" id ="list-05"> Hautes-Alpes</a></li>
-                <li><a href="https://google.com/?q=FR-06" id ="list-06"> Alpes-Maritimes</a></li>
-                <li><a href="https://google.com/?q=FR-07" id ="list-07"> Ardèche</a></li>
-                <li><a href="https://google.com/?q=FR-08" id ="list-08"> Ardennes</a></li>
-                <li><a href="https://google.com/?q=FR-09" id ="list-09"> Ariège</a></li>
-                <li><a href="https://google.com/?q=FR-10" id ="list-10"> Aube</a></li>
-                <li><a href="https://google.com/?q=FR-11" id ="list-11"> Aude</a></li>
-                <li><a href="https://google.com/?q=FR-12" id ="list-12"> Aveyron</a></li>
-                <li><a href="https://google.com/?q=FR-13" id ="list-13"> Bouches-du-Rhône</a></li>
-                <li><a href="https://google.com/?q=FR-14" id ="list-14"> Calvados</a></li>
-                <li><a href="https://google.com/?q=FR-15" id ="list-15"> Cantal</a></li>
-                <li><a href="https://google.com/?q=FR-16" id ="list-16"> Charente</a></li>
-                <li><a href="https://google.com/?q=FR-17" id ="list-17"> Charente-Maritime</a></li>
-                <li><a href="https://google.com/?q=FR-18" id ="list-18"> Cher</a></li>
-                <li><a href="https://google.com/?q=FR-19" id ="list-19"> Corrèze</a></li>
-                <li><a href="https://google.com/?q=FR-2A" id ="list-2A"> Corse-du-Sud</a></li>
-                <li><a href="https://google.com/?q=FR-2B" id ="list-2B"> Haute-Corse</a></li>
-                <li><a href="https://google.com/?q=FR-21" id ="list-21"> Côte-dOr</a></li>
-                <li><a href="https://google.com/?q=FR-22" id ="list-22"> Côtes-d Armor</a></li>
-                <li><a href="https://google.com/?q=FR-23" id ="list-23"> Creuse</a></li>
-                <li><a href="https://google.com/?q=FR-24" id ="list-24"> Dordogne</a></li>
-                <li><a href="https://google.com/?q=FR-25" id ="list-25"> Doubs</a></li>
-                <li><a href="https://google.com/?q=FR-26" id ="list-26"> Drôme</a></li>
-                <li><a href="https://google.com/?q=FR-27" id ="list-27"> Eure</a></li>
-                <li><a href="https://google.com/?q=FR-28" id ="list-28"> Eure-et-Loir</a></li>
-                <li><a href="https://google.com/?q=FR-29" id ="list-29"> Finist-re</a></li>
-                <li><a href="https://google.com/?q=FR-30" id ="list-30"> Gard</a></li>
-                <li><a href="https://google.com/?q=FR-31" id ="list-31"> Haute-Garonne</a></li>
-                <li><a href="https://google.com/?q=FR-32" id ="list-32"> Gers</a></li>
-                <li><a href="https://google.com/?q=FR-33" id ="list-33"> Gironde</a></li>
-                <li><a href="https://google.com/?q=FR-34" id ="list-34"> Hérault</a></li>
-                <li><a href="https://google.com/?q=FR-35" id ="list-35"> Ille-et-Vilaine</a></li>
-                <li><a href="https://google.com/?q=FR-36" id ="list-36"> Indre</a></li>
-                <li><a href="https://google.com/?q=FR-37" id ="list-37"> Indre-et-Loire</a></li>
-                <li><a href="https://google.com/?q=FR-38" id ="list-38"> Isère</a></li>
-                <li><a href="https://google.com/?q=FR-39" id ="list-39"> Jura</a></li>
-                <li><a href="https://google.com/?q=FR-40" id ="list-40"> Landes</a></li>
-                <li><a href="https://google.com/?q=FR-41" id ="list-41"> Loir-et-Cher</a></li>
-                <li><a href="https://google.com/?q=FR-42" id ="list-42"> Loire</a></li>
-                <li><a href="https://google.com/?q=FR-43" id ="list-43"> Haute-Loire</a></li>
-                <li><a href="https://google.com/?q=FR-44" id ="list-44"> Loire-Atlantique</a></li>
-                <li><a href="https://google.com/?q=FR-45" id ="list-45"> Loiret</a></li>
-                <li><a href="https://google.com/?q=FR-46" id ="list-46"> Lot</a></li>
-                <li><a href="https://google.com/?q=FR-47" id ="list-47"> Lot-et-Garonne</a></li>
-                <li><a href="https://google.com/?q=FR-48" id ="list-48"> Lozère</a></li>
-                <li><a href="https://google.com/?q=FR-49" id ="list-49"> Maine-et-Loire</a></li>
-                <li><a href="https://google.com/?q=FR-50" id ="list-50"> Manche</a></li>
-                <li><a href="https://google.com/?q=FR-51" id ="list-51"> Marne</a></li>
-                <li><a href="https://google.com/?q=FR-52" id ="list-52"> Haute-Marne</a></li>
-                <li><a href="https://google.com/?q=FR-53" id ="list-53"> Mayenne</a></li>
-                <li><a href="https://google.com/?q=FR-54" id ="list-54"> Meurthe-et-Moselle</a></li>
-                <li><a href="https://google.com/?q=FR-55" id ="list-55"> Meuse</a></li>
-                <li><a href="https://google.com/?q=FR-56" id ="list-56"> Morbihan</a></li>
-                <li><a href="https://google.com/?q=FR-57" id ="list-57"> Moselle</a></li>
-                <li><a href="https://google.com/?q=FR-58" id ="list-58"> Nièvre</a></li>
-                <li><a href="https://google.com/?q=FR-59" id ="list-59"> Nord</a></li>
-                <li><a href="https://google.com/?q=FR-60" id ="list-60"> Oise</a></li>
-                <li><a href="https://google.com/?q=FR-61" id ="list-61"> Orne</a></li>
-                <li><a href="https://google.com/?q=FR-62" id ="list-62"> Pas-de-Calais</a></li>
-                <li><a href="https://google.com/?q=FR-63" id ="list-63"> Puy-de-Dôme</a></li>
-                <li><a href="https://google.com/?q=FR-64" id ="list-64"> Pyrénées-Atlantiques</a></li>
-                <li><a href="https://google.com/?q=FR-65" id ="list-65"> Hautes-Pyrénées</a></li>
-                <li><a href="https://google.com/?q=FR-66" id ="list-66"> Pyrénées-Orientales</a></li>
-                <li><a href="https://google.com/?q=FR-67" id ="list-67"> Bas-Rhin</a></li>
-                <li><a href="https://google.com/?q=FR-68" id ="list-68"> Haut-Rhin</a></li>
-                <li><a href="https://google.com/?q=FR-69" id ="list-69"> Rhône</a></li>
-                <li><a href="https://google.com/?q=FR-70" id ="list-70"> Haute-Saône</a></li>
-                <li><a href="https://google.com/?q=FR-71" id ="list-71"> Saône-et-Loire</a></li>
-                <li><a href="https://google.com/?q=FR-72" id ="list-72"> Sarthe</a></li>
-                <li><a href="https://google.com/?q=FR-73" id ="list-73"> Savoie</a></li>
-                <li><a href="https://google.com/?q=FR-74" id ="list-74"> Haute-Savoie</a></li>
-                <li><a href="https://google.com/?q=FR-75" id ="list-75"> Ville de Paris</a></li>
-                <li><a href="https://google.com/?q=FR-76" id ="list-76"> Seine-Maritime</a></li>
-                <li><a href="https://google.com/?q=FR-77" id ="list-77"> Seine-et-Marne</a></li>
-                <li><a href="https://google.com/?q=FR-78" id ="list-78"> Yvelines</a></li>
-                <li><a href="https://google.com/?q=FR-79" id ="list-79"> Deux-Sèvres</a></li>
-                <li><a href="https://google.com/?q=FR-80" id ="list-80"> Somme</a></li>
-                <li><a href="https://google.com/?q=FR-81" id ="list-81"> Tarn</a></li>
-                <li><a href="https://google.com/?q=FR-82" id ="list-82"> Tarn-et-Garonne</a></li>
-                <li><a href="https://google.com/?q=FR-83" id ="list-83"> Var</a></li>
-                <li><a href="https://google.com/?q=FR-84" id ="list-84"> Vaucluse</a></li>
-                <li><a href="https://google.com/?q=FR-85" id ="list-85"> Vendée</a></li>
-                <li><a href="https://google.com/?q=FR-86" id ="list-86"> Vienne</a></li>
-                <li><a href="https://google.com/?q=FR-87" id ="list-87"> Haute-Vienne</a></li>
-                <li><a href="https://google.com/?q=FR-88" id ="list-88"> Vosges</a></li>
-                <li><a href="https://google.com/?q=FR-89" id ="list-89"> Yonne</a></li>
-                <li><a href="https://google.com/?q=FR-90" id ="list-90"> Territoire de Belfor</a></li>
-                <li><a href="https://google.com/?q=FR-91" id ="list-91"> Essonne</a></li>
-                <li><a href="https://google.com/?q=FR-92" id ="list-92"> Hauts-de-Seine</a></li>
-                <li><a href="https://google.com/?q=FR-93" id ="list-93"> Seine-Saint-Denis</a></li>
-                <li><a href="https://google.com/?q=FR-94" id ="list-94"> Val-de-Marne</a></li>
-                <li><a href="https://google.com/?q=FR-95" id ="list-95"> Val-d Oise</a></li>
-        </ul>
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Bourgogne Franche-Comté</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-21"  class="is-active"id ="list-21"> Côte-dOr</a></li>
+                <li><a href="https://google.com/?q=FR-89"  class="is-active"id ="list-89"> Yonne</a></li>
+                <li><a href="https://google.com/?q=FR-58"  class="is-active"id ="list-58"> Nièvre</a></li>
+                <li><a href="https://google.com/?q=FR-71"  class="is-active"id ="list-71"> Saône-et-Loire</a></li>
+                <li><a href="https://google.com/?q=FR-39"  class="is-active"id ="list-39"> Jura</a></li>
+                <li><a href="https://google.com/?q=FR-70"  class="is-active"id ="list-70"> Haute-Saône</a></li>
+                <li><a href="https://google.com/?q=FR-25"  class="is-active"id ="list-25"> Doubs</a></li>
+                <li><a href="https://google.com/?q=FR-90"  class="is-active"id ="list-90"> Territoire de Belfor</a></li>
+
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Centre Val de Loire</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-28"  class="is-active"id ="list-28"> Eure-et-Loir</a></li>
+                <li><a href="https://google.com/?q=FR-41"  class="is-active"id ="list-41"> Loir-et-Cher</a></li>
+                <li><a href="https://google.com/?q=FR-45"  class="is-active"id ="list-45"> Loiret</a></li>
+                <li><a href="https://google.com/?q=FR-37"  class="is-active"id ="list-37"> Indre-et-Loire</a></li>
+                <li><a href="https://google.com/?q=FR-18"  class="is-active"id ="list-18"> Cher</a></li>
+                <li><a href="https://google.com/?q=FR-36"  class="is-active"id ="list-36"> Indre</a></li>
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Pays de la Loire</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-44"  class="is-active"id ="list-44"> Loire-Atlantique</a></li>
+                <li><a href="https://google.com/?q=FR-85"  class="is-active"id ="list-85"> Vendée</a></li>
+                <li><a href="https://google.com/?q=FR-49"  class="is-active"id ="list-49"> Maine-et-Loire</a></li>
+                <li><a href="https://google.com/?q=FR-53"  class="is-active"id ="list-53"> Mayenne</a></li>
+                <li><a href="https://google.com/?q=FR-72"  class="is-active"id ="list-72"> Sarthe</a></li>
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Bretagne</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-35"  class="is-active"id ="list-35"> Ille-et-Vilaine</a></li>
+                <li><a href="https://google.com/?q=FR-56"  class="is-active"id ="list-56"> Morbihan</a></li>
+                <li><a href="https://google.com/?q=FR-22"  class="is-active"id ="list-22"> Côtes-d Armor</a></li>
+                <li><a href="https://google.com/?q=FR-29"  class="is-active"id ="list-29"> Finist-re</a></li>
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Nouvelle Aquitaine</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-86"  class="is-active"id ="list-86"> Vienne</a></li>
+                <li><a href="https://google.com/?q=FR-87"  class="is-active"id ="list-87"> Haute-Vienne</a></li>
+                <li><a href="https://google.com/?q=FR-79"  class="is-active"id ="list-79"> Deux-Sèvres</a></li>
+                <li><a href="https://google.com/?q=FR-16"  class="is-active"id ="list-16"> Charente</a></li>
+                <li><a href="https://google.com/?q=FR-17"  class="is-active"id ="list-17"> Charente-Maritime</a></li>
+                <li><a href="https://google.com/?q=FR-23"  class="is-active"id ="list-23"> Creuse</a></li>
+                <li><a href="https://google.com/?q=FR-19"  class="is-active"id ="list-19"> Corrèze</a></li>
+                <li><a href="https://google.com/?q=FR-24"  class="is-active"id ="list-24"> Dordogne</a></li>
+                <li><a href="https://google.com/?q=FR-33"  class="is-active"id ="list-33"> Gironde</a></li>
+                <li><a href="https://google.com/?q=FR-47"  class="is-active"id ="list-47"> Lot-et-Garonne</a></li>
+                <li><a href="https://google.com/?q=FR-40"  class="is-active"id ="list-40"> Landes</a></li>
+                <li><a href="https://google.com/?q=FR-64"  class="is-active"id ="list-64"> Pyrénées-Atlantiques</a></li>
+                
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Auvergne Rhône Alpes</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-01"  class="is-active"id ="list-01"> Ain</a></li>
+                <li><a href="https://google.com/?q=FR-03"  class="is-active"id ="list-03"> Allier</a></li>
+                <li><a href="https://google.com/?q=FR-07"  class="is-active"id ="list-07"> Ardèche</a></li>
+                <li><a href="https://google.com/?q=FR-15"  class="is-active"id ="list-15"> Cantal</a></li>
+                <li><a href="https://google.com/?q=FR-63"  class="is-active"id ="list-63"> Puy-de-Dôme</a></li>
+                <li><a href="https://google.com/?q=FR-42"  class="is-active"id ="list-42"> Loire</a></li>
+                <li><a href="https://google.com/?q=FR-43"  class="is-active"id ="list-43"> Haute-Loire</a></li>
+                <li><a href="https://google.com/?q=FR-69"  class="is-active"id ="list-69"> Rhône</a></li>
+                <li><a href="https://google.com/?q=FR-26"  class="is-active"id ="list-26"> Drôme</a></li>
+                <li><a href="https://google.com/?q=FR-38"  class="is-active"id ="list-38"> Isère</a></li>
+                <li><a href="https://google.com/?q=FR-73"  class="is-active"id ="list-73"> Savoie</a></li>
+                <li><a href="https://google.com/?q=FR-74"  class="is-active"id ="list-74"> Haute-Savoie</a></li>
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Occitanie</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-11"  class="is-active"id ="list-11"> Aude</a></li>
+                <li><a href="https://google.com/?q=FR-12"  class="is-active"id ="list-12"> Aveyron</a></li>
+                <li><a href="https://google.com/?q=FR-30"  class="is-active"id ="list-30"> Gard</a></li>
+                <li><a href="https://google.com/?q=FR-46"  class="is-active"id ="list-46"> Lot</a></li>
+                <li><a href="https://google.com/?q=FR-48"  class="is-active"id ="list-48"> Lozère</a></li>
+                <li><a href="https://google.com/?q=FR-81"  class="is-active"id ="list-81"> Tarn</a></li>
+                <li><a href="https://google.com/?q=FR-82"  class="is-active"id ="list-82"> Tarn-et-Garonne</a></li>
+                <li><a href="https://google.com/?q=FR-32"  class="is-active"id ="list-32"> Gers</a></li>
+                <li><a href="https://google.com/?q=FR-65"  class="is-active"id ="list-65"> Hautes-Pyrénées</a></li>
+                <li><a href="https://google.com/?q=FR-09"  class="is-active"id ="list-09"> Ariège</a></li>
+                <li><a href="https://google.com/?q=FR-66"  class="is-active"id ="list-66"> Pyrénées-Orientales</a></li>
+                <li><a href="https://google.com/?q=FR-34"  class="is-active"id ="list-34"> Hérault</a></li>
+                <li><a href="https://google.com/?q=FR-31"  class="is-active"id ="list-31"> Haute-Garonne</a></li>
+            </ul>
+        </li>
+
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Provence-Alpes Côte d'Azur</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-83"  class="is-active"id ="list-83"> Var</a></li>
+                <li><a href="https://google.com/?q=FR-84"  class="is-active"id ="list-84"> Vucluse</a></li>
+                <li><a href="https://google.com/?q=FR-04"  class="is-active"id ="list-04"> Alpes-de-Haute-Provence</a></li>
+                <li><a href="https://google.com/?q=FR-06"  class="is-active"id ="list-06"> Alpes-Maritimes</a></li>
+                <li><a href="https://google.com/?q=FR-05"  class="is-active"id ="list-05"> Hautes-Alpes</a></li>
+                <li><a href="https://google.com/?q=FR-13"  class="is-active"id ="list-13"> Bouches-du-Rhône</a></li>
+            </ul>
+        </li>
+        <li class = "déroulant"><a href="https://google.com/?q=Régions" class="is-active">Corse</a>
+            <ul class="sous">
+                <li><a href="https://google.com/?q=FR-2A"  class="is-active"id ="list-2A"> Corse-du-Sud</a></li>
+                <li><a href="https://google.com/?q=FR-2B"  class="is-active"id ="list-2B"> Haute-Corse</a></li>
+            </ul>
+        </li>   
     </div>
+</div>
+</nav>
 </div>
 <script src="app.js"></script>
 </body>
+<footer>
+
+    <div class="footer-left">
+        <div class="footer-links">
+            <a href="#" class="footer-link">Contact</a>
+            <a href="#" class="footer-link">Avis</a>
+            <a href="#" class="footer-link">Offres d'emploi</a>
+            <a href="#" class="footer-link">Opportunitées d'emploi</a>
+            <a href="#" class="footer-link">Carrières</a>
+        </div>
+        <div class="footer-p">
+            <div>
+                <a href="https:"><img src="/img/logo/log.png" width="30"
+                        alt="Logo"></a>
+            </div>
+            <div>
+                <p>Projets de recrutement </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-right">
+
+        <div class="signup-text">
+            <p>Inscrivez-vous à notre newsletter </p>
+        </div>
+        <div class="signup-form">
+            <div class="email-input">
+                <form>
+                    <input type="text" placeholder="Email">
+                    <button class="signup-button">S'INSCRIRE > <!-- pour > on devrait mettre icone--></button>
+                </form>
+            </div>
+            <div class="signup-info">
+
+                <p class="privacy-text">En cliquant sur S'inscrire, vous acceptez notre <a href="#"
+                        class="privacy-link">Politique de confidentialité</a></p>
+            </div>
+        </div>
+
+    </div>
+</footer>
 </html>
